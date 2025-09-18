@@ -1,0 +1,27 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.eol": "\n",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "zenn.port": 8000
+      },
+      "extensions": [
+        "shd101wyy.markdown-preview-enhanced",
+        "yzhang.markdown-all-in-one",
+        "streetsidesoftware.code-spell-checker",
+        "zenn.zenn-editor"
+      ]
+    }
+  },
+  "forwardPorts": [
+    8000
+  ],
+  "postStartCommand": "pnpm run preview",
+  "remoteUser": "node"
+}

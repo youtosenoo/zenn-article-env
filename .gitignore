@@ -1,0 +1,23 @@
+# OS系
+.DS_Store
+Thumbs.db
+.env
+
+# エディタ系
+.idea/
+.vscode/
+*.swp
+
+# Node.js（Zenn CLI使う場合）
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Zenn CLI キャッシュ
+.cache/
+
+# ビルド成果物
+dist/
+build/
+.pnpm-store/

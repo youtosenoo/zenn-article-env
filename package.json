@@ -1,0 +1,19 @@
+{
+  "name": "zenn-content",
+  "version": "1.0.0",
+  "description": "Zennブログ用",
+  "main": "index.js",
+  "scripts": {
+    "preview": "zenn preview",
+    "new:article": "./create-zenn-article.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zenn-cli": "^0.2.3"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^10.0.0"
+  }
+}

@@ -1,0 +1,4 @@
+article:
+  path: "src/articles"
+book:
+  path: "src/books"

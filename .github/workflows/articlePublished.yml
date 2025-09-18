@@ -1,0 +1,33 @@
+name: Update README on Main Push
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      targetFile:
+        description: '対象ファイル名'
+        required: false
+        default: 'README.md'
+
+jobs:
+  update-markdown:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Markdown file
+        run: |
+          sed -i "s/published: false/published: true/g" ${{ github.event.inputs.targetFile }}
+
+      - name: Commit and Push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Docs: Update ${{ github.event.inputs.targetFile }} with input"
+          git push
